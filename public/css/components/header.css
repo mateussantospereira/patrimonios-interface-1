@@ -1,0 +1,19 @@
+header {
+    background-color: var(--color-main-1);
+    color: white;
+}
+
+header h1 {
+    letter-spacing: 1px;
+}
+
+.a-header {
+    border: 0 !important;
+    background-color: transparent !important;
+    color: white;
+    padding: 0 !important;
+}
+
+.a-header:hover {
+    -webkit-text-fill-color: var(--color-gray-5);
+}

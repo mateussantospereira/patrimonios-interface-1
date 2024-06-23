@@ -1,0 +1,19 @@
+<% head = {
+    ni: "Nº invent.",
+    instituicao: "Instituição" ,
+    tag: "Tag" ,
+    descricao: "Descrição" ,
+    sala: "Sala" ,
+    localizacao: "Local" ,
+    ativo: "Ativo" ,
+} %>
+
+<% if (update) { %>
+    <% head.atualizacao = "Atualização" %>
+<% } %>
+
+<%- include('./tabela', {
+    head: head,
+
+    tabela: tabela["data"]
+}) %>

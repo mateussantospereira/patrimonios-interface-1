@@ -1,0 +1,40 @@
+<main>
+    <div class="validate">
+
+        <div>
+            <div class="box-validate">
+                <div class="titulo">
+                    <%- include('../components/titulo', { titulo: "Validação" }) %>
+                </div><br>
+        
+                <%- include('../components/message', { value: "" }) %>
+        
+                <div class="center">
+                    <form id="form">
+                        <%- include('../components/input', {
+                            label: "E-mail:" , type: "text" , value: "" , id: "email" }) %>
+                        <%- include('../components/input', {
+                            label: "Senha:" , type: "password" , value: "" , id: "senha" }) %>
+        
+                        <div class="center">
+                            <button class="primary">Validar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <%- include('../components/footer') %>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    const form = document.getElementById("form");
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        fetchRedirect("/registro/validar", "POST", form, "/listar");
+    });
+</script>

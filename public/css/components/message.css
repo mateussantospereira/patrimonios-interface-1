@@ -1,0 +1,9 @@
+#message {
+    font-weight: bold;
+    padding: 7px;
+    border: 1px solid;
+    border-radius: 2px;
+    background-color: var(--color-message-1);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}

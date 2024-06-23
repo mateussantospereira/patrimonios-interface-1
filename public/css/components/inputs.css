@@ -1,0 +1,22 @@
+.input {
+    width: 50vh;
+}
+
+label p {
+    font-weight: bolder;
+    margin: 3px 0px;
+}
+
+input[type="file"]::file-selector-button {
+    border: solid 1px;
+    border-color: black !important;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: var(--color-gray-2);
+    color: white;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: var(--color-gray-4);
+}

@@ -1,0 +1,17 @@
+:root {
+    --color-gray-1: rgb(42, 42, 42);
+    --color-gray-2: rgb(83, 83, 83);
+    --color-gray-3: rgb(126, 126, 126);
+    --color-gray-4: rgb(145, 145, 145);
+    --color-gray-5: rgb(201, 201, 201);
+    --color-gray-6: rgb(220, 220, 220);
+
+    --color-main-1: rgb(17, 18, 104);
+    --color-main-2: rgb(60, 63, 199);
+
+    --color-red-1: rgb(124, 0, 0);
+
+    --color-message-1: rgb(255, 238, 156);
+
+    --font-family: sans-serif;
+}

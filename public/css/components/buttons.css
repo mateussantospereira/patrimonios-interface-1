@@ -1,0 +1,40 @@
+button {
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: var(--color-gray-5);
+}
+
+.buttons button {
+    margin: 0 7px;
+}
+
+.primary {
+    background-color: var(--color-main-1);
+    -webkit-text-fill-color: white;
+}
+
+.primary:hover {
+    background-color: black;
+}
+
+.secondary {
+    background-color: white;
+}
+
+.secondary:hover {
+    background-color: var(--color-gray-5);
+}
+
+.third {
+    background-color: var(--color-red-1);
+    -webkit-text-fill-color: white;
+}
+
+.third:hover {
+    background-color: black;
+}

@@ -1,0 +1,11 @@
+.validate {
+    height: 100vh !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-validate {
+    margin-bottom: 10vh;
+}

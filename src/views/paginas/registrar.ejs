@@ -1,0 +1,40 @@
+<main>
+    <div class="center">
+        <h2>Registro</h2>
+    </div>
+
+    <%- include('../components/message', { value: "" }) %>
+    
+    <div class="center">
+        <form id="form">
+            <%- include('../components/input', { label: "Nome:" , type: "text" , value: "" ,
+                id: "nome" }) %>
+            <%- include('../components/input', { label: "E-mail:" , type: "text" , value: ""
+                , id: "email" }) %>
+            <%- include('../components/input', { label: "Senha:" , type: "password" ,
+                value: "" , id: "senha" }) %>
+            <%- include('../components/input', { label: "Confirmar senha:" ,
+                type: "password" , value: "" , id: "confirmarSenha" }) %>
+
+            <div class="center">
+                <button class="primary">Registrar</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script>
+    const form = document.getElementById("form");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        fetchRedirect(
+            "/registro/criar", "POST", form, "/registros",
+            {
+                data: ["senha", "confirmarSenha"],
+                message: "Erro. A senha não confere."
+            }
+        );
+    });
+</script>

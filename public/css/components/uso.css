@@ -1,0 +1,19 @@
+.uso {
+    margin-top: 60px !important;
+    margin: 30px 300px;
+}
+
+.uso p {
+    font-size: 19px !important;
+}
+
+.uso thead {
+    background-color: var(--color-gray-4);
+    font-weight: 100 !important;
+}
+
+.uso th {
+    font-size: 19px;
+    padding: 2px 4px !important;
+    -webkit-text-fill-color: white;
+}

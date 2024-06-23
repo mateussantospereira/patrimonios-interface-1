@@ -1,0 +1,33 @@
+
+<main>
+    <div class="center">
+        <h2>Listagem de Patrimônios</h2>
+    </div>
+
+    <% if (body.tabela["status"] == 200) { %>
+    
+        <%- include('../components/search', { placeholder: "Procurar patrimônio" }) %><br>
+
+        <div class="center">
+            <a href="/cadastrar"><button class="primary">Cadastrar Patrimônio</button></a>
+        </div><br>
+
+        <%- include('../components/patrimonios', { tabela: body.tabela, update: true }) %>
+        
+        <br>
+
+        <%- include('../components/boxDelete', { label: "Confirme a exclusão de todos os patrimônios:" , button: "Excluir patrimônios",
+        route:`/patrimonio/truncar`, redirect: "/listar" }) %>
+
+    <% } else { %>
+        
+        <div class="center">
+            <p id="message"><%= body.tabela["message"] %></p>
+        </div>
+
+        <div class="center">
+            <a href="/cadastrar"><button class="primary">Cadastrar Patrimônio</button></a>
+        </div>
+
+    <% } %>
+</main>

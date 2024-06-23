@@ -1,0 +1,34 @@
+
+<main>
+    <div class="center">
+        <h2>Registros de usuários</h2>
+    </div>
+
+    <% if (body.tabela["status"] == 200) { %>
+    
+        <%- include('../components/search', { placeholder: "Procurar registro" }) %><br>
+
+        <div class="center">
+            <a href="/registrar"><button class="primary">Registrar usuário</button></a>
+        </div><br>
+
+        <%- include('../components/tabela', {
+            head: {
+                nome: "Nome",
+                email: "E-mail",
+                modificacao: "Modificação"
+            }, tabela: body.tabela["data"]
+        }) %>
+
+    <% } else { %>
+        
+        <div class="center">
+            <p><%= body.tabela["message"] %></p>
+        </div><br><br>
+
+        <div class="center">
+            <a href="/registrar"><button class="primary">Registrar usuário</button></a>
+        </div>
+
+    <% } %>
+</main>
